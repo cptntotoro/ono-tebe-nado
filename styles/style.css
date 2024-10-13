@@ -3,30 +3,6 @@
   --secondary-text-color: #fff;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway-Regular.woff) format("woff");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway-Bold.woff) format("woff");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway-Regular.woff2) format("woff2");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway-Bold.woff2) format("woff2");
-  font-weight: bold;
-}
-
 /* COMMON STYLES START */
 
 .link {
@@ -51,6 +27,29 @@
   line-height: 135%;
 }
 
+.address-contacts {
+  font-weight: normal;
+  font-size: 18px;
+  font-style: normal;
+  /* Относительная высота строки: 
+  line-height/font-size * 100%
+  24.3/18 * 100% = 135% */
+  line-height: 135%;
+  /* 1% от размера шрифта */
+  letter-spacing: calc(18px * 0.01);
+}
+
+.address-location {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+  font-style: normal;
+  /* Относительная высота строки: 
+  line-height/font-size * 100%
+  24.3/18 * 100% = 135% */
+  line-height: 135%;
+}
+
 /* COMMON STYLES END */
 
 /* HEADER START */
@@ -58,22 +57,17 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
-  grid-template-rows: 105px;
-  margin: 92px 24px 96px;
+  margin: 92px 24px;
 }
 
 .header__menu {
-  position: relative;
-  top: 2px;
-  right: 3px;
-  width: 392px;
+  min-width: 396px;
   margin: auto;
 }
 
 .header__links-list {
   display: flex;
   justify-content: space-between;
-  gap: 18px;
 }
 
 .header__links-list-item {
@@ -93,21 +87,12 @@
 }
 
 .header__logo-image {
-  height: 100%;
+  height: 105px;
 }
 
 .header__address {
   width: 240px;
   margin: auto 25px auto auto;
-}
-
-.header__address-contacts {
-  /* 1% от размера шрифта */
-  letter-spacing: calc(18px * 0.01);
-}
-
-.header__address-location {
-  display: block;
 }
 
 /* HEADER END */
@@ -119,7 +104,6 @@
 .cover {
   position: relative;
   z-index: 1;
-  height: 757px;
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -137,13 +121,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  padding: 165px 50px 51px 50px;
+  min-height: 757px;
+  padding: 150px 50px 51px 50px;
 }
 
 .cover__title {
-  position: relative;
-  display: block;
+  /* position: relative;
+  display: block; */
 }
 
 .cover__title-item {
@@ -164,17 +148,15 @@
   /* Относительная высота строки: 
   line-height/font-size * 100%
   115/100 * 100% = 115% */
-  line-height: 115%;
+  line-height: 141%;
 }
 
 .aligned-text_center {
-  margin-top: 11px;
-  margin-left: 286px;
+  text-align: center;
 }
 
 .aligned-text_right {
-  margin-top: 4px;
-  margin-left: 583px;
+  text-align: end;
 }
 
 .cover__title-letter-spacing {
@@ -219,9 +201,10 @@
 }
 
 .bet-button {
-  border: 1px solid var(--secondary-text-color);
+  border: 1px solid currentColor;
   padding: 12px 32px;
   color: var(--secondary-text-color);
+  font-family: Raleway, sans-serif;
   font-weight: 500;
   font-size: 22px;
   font-style: normal;
@@ -237,7 +220,7 @@
 /* SECTION LOTS START */
 
 .lots {
-  margin: 179px 24px 146px;
+  margin: 177px 24px 146px;
 }
 
 .lots__heading {
@@ -253,12 +236,15 @@
 
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 30px;
 }
 
 .lots__card-list-item {
   display: block;
+  flex-grow: 1;
+  flex-basis: 334px;
   list-style-type: none;
 }
 
@@ -286,7 +272,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 334px;
   height: 100%;
   padding: 51px 40px 48px;
   background-repeat: no-repeat;
@@ -336,7 +321,6 @@
 .about__grid {
   display: grid;
   grid-template-columns: 334px 1fr;
-  grid-template-rows: 240px 320px;
   row-gap: 7px;
   column-gap: 24px;
 }
@@ -401,35 +385,11 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 98px;
-  margin: 173px 50px 88px;
+  margin: 182px 50px 88px;
 }
 
 .footer__address {
   width: 240px;
-}
-
-.footer__address-contacts {
-  font-weight: normal;
-  font-size: 18px;
-  font-style: normal;
-  /* Относительная высота строки: 
-  line-height/font-size * 100%
-  24.3/18 * 100% = 135% */
-  line-height: 135%;
-  /* 1% от размера шрифта */
-  letter-spacing: calc(18px * 0.01);
-}
-
-.footer__address-location {
-  display: block;
-  font-weight: normal;
-  font-size: 18px;
-  font-style: normal;
-  /* Относительная высота строки: 
-  line-height/font-size * 100%
-  24.3/18 * 100% = 135% */
-  line-height: 135%;
 }
 
 .footer__menu {
