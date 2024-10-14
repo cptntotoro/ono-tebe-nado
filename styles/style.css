@@ -125,11 +125,6 @@
   padding: 150px 50px 51px 50px;
 }
 
-.cover__title {
-  /* position: relative;
-  display: block; */
-}
-
 .cover__title-item {
   display: block;
   color: var(--secondary-text-color);
@@ -339,11 +334,10 @@
 }
 
 .about__title {
-  position: relative;
-  top: 4px;
   display: block;
   grid-area: 1 / 2 / 2 / 3;
   margin: auto 0;
+  padding-top: 11px;
   font-weight: 700;
   font-size: 40px;
   font-style: normal;
