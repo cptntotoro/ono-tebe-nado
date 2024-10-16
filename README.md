@@ -1,1 +1,9 @@
-https://github.com/cptntotoro/ono-tebe-nado
+# Оно тебе надо
+HTML, CSS 
+
+## О проекте
+Pixel perfect вёрстка по макету Figma строго по рекомендациям к оформлению отдельных блоков.
+
+- Протестирована в Firefox, Google Chrome и Yandex Browser
+- Разница верстки и макета составляет не более 10px по вертикали и 5px по горизонтали
+- Доведено до точного соответствия с помощью Pixel Perfect плагина
